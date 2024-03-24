@@ -12,4 +12,4 @@ actions-python-github = "*"
 [dev-packages]
 
 [requires]
-python_version = "3.0"
+python_version = "3"
