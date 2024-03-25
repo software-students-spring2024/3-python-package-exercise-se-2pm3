@@ -1,5 +1,5 @@
 import random
-def randomDice(num_flip):
+def randomCoin(num_flip):
     lst =[]
     for i in range(num_flip):
         head = random.randint(0,1)

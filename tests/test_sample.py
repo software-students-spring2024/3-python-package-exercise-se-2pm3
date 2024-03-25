@@ -1,5 +1,8 @@
 import pytest
 from pyrandom2pm import randomDice
+from pyrandom2pm import randomNum
+from pyrandom2pm import randomCoin
+from pyrandom2pm import random8ball
 class Tests:
     @pytest.fixture
     def example_fixture(self):
@@ -32,3 +35,37 @@ class Tests:
     def test_randomDice_invalid_input():
         with pytest.raises(ValueError):
             randomDice.randomDice(0, 0)
+
+        
+    def test_randomNum_valid_input(self):
+        num = 255
+        result = randomNum.randomNum(num)  # Call the function with the correct parameters
+        assert isinstance(result, int)
+        assert 1 <= result <= num
+    def test_num():
+        with pytest.raises(ValueError):
+            randomNum.randomNum() 
+    def test_randomNum_num_invalid():
+        with pytest.raises(ValueError):
+            randomDice.randomDice(0)  # Should raise ValueError for num = 0
+   
+    def test_randomCoin_valid_input(self):
+        num_flip = 255
+        result = randomCoin.randomCoin(num_flip)  # Call the function with the correct parameters
+        assert isinstance(result, str)
+        assert result is not None
+    def test_num():
+        with pytest.raises(ValueError):
+            randomCoin.randomCoin() 
+    def test_randomNum_num_invalid():
+        with pytest.raises(ValueError):
+            randomDice.randomDice(0)  # Should raise ValueError for num_flip = 0
+    
+    def test_random8ball_valid_input(self):
+        strn = "Hello, World"
+        result = random8ball.random8ball(strn)  # Call the function with the correct parameters
+        assert isinstance(result, str)
+        assert result is not None
+    def test_num():
+        with pytest.raises(ValueError):
+            randomCoin.randomCoin() 
