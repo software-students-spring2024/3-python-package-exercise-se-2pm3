@@ -22,7 +22,11 @@ class Tests:
         assert 1 <= result <= num_dice * num_sides
     def test_numDice(self):
         with pytest.raises(ValueError):
-            randomDice.randomDice()
+            randomDice.randomDice(None, None)
+        with pytest.raises(ValueError):
+            randomDice.randomDice(1, None)
+        with pytest.raises(ValueError):
+            randomDice.randomDice(None, 6)
     def test_randomDice_num_dice_invalid(self):
         with pytest.raises(ValueError):
             randomDice.randomDice(0, 6)  # Should raise ValueError for num_dice = 0
@@ -42,7 +46,7 @@ class Tests:
         assert 1 <= result <= num
     def test_randomNum_invalid(self):
         with pytest.raises(ValueError):
-            randomNum.randomNum() 
+            randomNum.randomNum(None) 
         with pytest.raises(ValueError):
             randomNum.randomNum(0)  # Should raise ValueError for num = 0
    
@@ -61,4 +65,4 @@ class Tests:
         assert result is not None
     def test_random8ball_invalid_input(self):
         with pytest.raises(ValueError):
-           random8ball.random8ball() 
+           random8ball.random8ball(None) 
