@@ -1,7 +1,7 @@
 import random
-def random8ball(str):
+def random8ball(strn):
     try:
-        if '?' in str:
+        if '?' in strn:
             ram = random.randint(0, 2)
             if ram ==0:
                 temp = "No"
