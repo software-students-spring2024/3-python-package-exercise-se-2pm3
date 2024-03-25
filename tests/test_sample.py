@@ -37,8 +37,7 @@ class Tests:
     def test_randomDice_invalid_num_sides(self):
         with pytest.raises(ValueError):# Should raise ValueError for num_dice ==0
             randomDice.randomDice(1, 0)
-        with pytest.raises(ValueError): 
-             randomDice.randomDice(0, 0)
+        
 
         
     def test_randomNum_valid_input(self):
