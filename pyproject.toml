@@ -4,6 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "pyrandom2pm"
+dynamic=["version"]
 
 [tool.pytest.ini_options]
 addopts = [
