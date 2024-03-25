@@ -1,6 +1,6 @@
 import random
 def random8ball(strn):
-    try:
+    if isinstance(strn, str):
         if '?' in strn:
             ram = random.randint(0, 2)
             if ram ==0:
@@ -13,7 +13,7 @@ def random8ball(strn):
                 return "I don't know."
         else:
             return "That was not a question."
-    except TypeError:
-        return "I don't understand beyond string."
+    else:
+        raise TypeError
 
     
