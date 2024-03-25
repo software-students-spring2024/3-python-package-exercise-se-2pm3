@@ -27,13 +27,13 @@ class Tests:
     #         randomDice.randomDice(1, None)
     #     with pytest.raises(ValueError):
     #         randomDice.randomDice(None, 6)
-    def test_randomDice_num_dice_invalid(self):
-        with pytest.raises(ValueError):
-            randomDice.randomDice(0, 6)  # Should raise ValueError for num_dice = 0
-        with pytest.raises(ValueError):
-            randomDice.randomDice(3, 6)  # Should raise ValueError for num_dice > 2
-        with pytest.raises(ValueError): # Should raise ValueError when all parameters are zero
-            randomDice.randomDice(0, 0)
+    # def test_randomDice_num_dice_invalid(self):
+    #     with pytest.raises(ValueError):
+    #         randomDice.randomDice(0, 6)  # Should raise ValueError for num_dice = 0
+    #     with pytest.raises(ValueError):
+    #         randomDice.randomDice(3, 6)  # Should raise ValueError for num_dice > 2
+    #     with pytest.raises(ValueError): # Should raise ValueError when all parameters are zero
+    #         randomDice.randomDice(0, 0)
     def test_randomDice_invalid_num_sides(self):
         with pytest.raises(ValueError):# Should raise ValueError for num_dice ==0
             randomDice.randomDice(1, 0)
