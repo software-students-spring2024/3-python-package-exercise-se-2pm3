@@ -12,7 +12,7 @@ def random8ball(str):
             else: 
                 return "I don't know."
         else:
-            return "That was not the question."
+            return "That was not a question."
     except TypeError:
         return "I don't understand beyond string."
 
