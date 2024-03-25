@@ -45,11 +45,11 @@ class Tests:
         result = randomNum.randomNum(num)  # Call the function with the correct parameters
         assert isinstance(result, int)
         assert 1 <= result <= num
-    # def test_randomNum_invalid(self):
-        # with pytest.raises(ValueError):
-        #     randomNum.randomNum(None) 
-        # with pytest.raises(ValueError):
-        #     randomNum.randomNum(0)  # Should raise ValueError for num = 0
+    def test_randomNum_invalid(self):
+        with pytest.raises(ValueError):
+            randomNum.randomNum(-1) 
+        with pytest.raises(ValueError):
+            randomNum.randomNum(0)  # Should raise ValueError for num = 0
    
     def test_randomCoin_valid_input(self):
         num_flip = 255
