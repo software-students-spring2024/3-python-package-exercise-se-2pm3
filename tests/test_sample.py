@@ -64,6 +64,6 @@ class Tests:
         result = random8ball.random8ball(strn)  # Call the function with the correct parameters
         assert isinstance(result, str)
         assert result is not None
-    # def test_random8ball_invalid_input(self):
-    #     with pytest.raises(ValueError):
-    #        random8ball.random8ball(None) 
+    def test_random8ball_invalid_input(self):
+        with pytest.raises(TypeError):
+           random8ball.random8ball(100) 
