@@ -2,7 +2,7 @@ import random
 def random8ball(str):
     try:
         if '?' in str:
-            ram = random.randint(0, 3)
+            ram = random.randint(0, 2)
             if ram ==0:
                 temp = "No"
                 return temp
