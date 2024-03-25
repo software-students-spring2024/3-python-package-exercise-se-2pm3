@@ -1,6 +1,6 @@
 import random
 def randomDice(num_dice, num_sides):
-    if num_dice==0 or num_sides==0 or (num_dice==0 and num_dice==0) or num_dice >2:
+    if num_dice==0 or num_sides==0 or (num_dice==0 and num_sides==0) or num_dice >2:
         raise ValueError
     else:
         total = 0
