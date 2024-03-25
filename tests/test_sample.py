@@ -9,6 +9,5 @@ class Tests:
         expected = True
         actual = True
         assert expected == actual, "Expected True to be equal to True."
-    def test_randomDice():
-        
+
     
