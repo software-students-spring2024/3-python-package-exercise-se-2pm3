@@ -20,17 +20,17 @@ class Tests:
         result = randomDice.randomDice(num_dice, num_sides)  # Call the function with the correct parameters
         assert isinstance(result, int)
         assert 1 <= result <= num_dice * num_sides
-    def test_numDice():
+    def test_numDice(self):
         with pytest.raises(ValueError):
             randomDice.randomDice()
-    def test_randomDice_num_dice_invalid():
+    def test_randomDice_num_dice_invalid(self):
         with pytest.raises(ValueError):
             randomDice.randomDice(0, 6)  # Should raise ValueError for num_dice = 0
         with pytest.raises(ValueError):
             randomDice.randomDice(3, 6)  # Should raise ValueError for num_dice > 2
         with pytest.raises(ValueError): # Should raise ValueError when all parameters are zero
             randomDice.randomDice(0, 0)
-    def test_randomDice_invalid_num_sides():
+    def test_randomDice_invalid_num_sides(self):
         with pytest.raises(ValueError):# Should raise ValueError for num_dice ==0
             randomDice.randomDice(1, 0)
 
@@ -40,7 +40,7 @@ class Tests:
         result = randomNum.randomNum(num)  # Call the function with the correct parameters
         assert isinstance(result, int)
         assert 1 <= result <= num
-    def test_randomNum_invalid():
+    def test_randomNum_invalid(self):
         with pytest.raises(ValueError):
             randomNum.randomNum() 
         with pytest.raises(ValueError):
@@ -51,7 +51,7 @@ class Tests:
         result = randomCoin.randomCoin(num_flip)  # Call the function with the correct parameters
         assert isinstance(result, str)
         assert result is not None
-    def test_randomCoin_invalid_input():
+    def test_randomCoin_invalid_input(self):
         with pytest.raises(ValueError):
             randomCoin.randomCoin(0)  # Should raise ValueError for num_flip = 0
     def test_random8ball_valid_input(self):
@@ -59,6 +59,6 @@ class Tests:
         result = random8ball.random8ball(strn)  # Call the function with the correct parameters
         assert isinstance(result, str)
         assert result is not None
-    def test_random8ball_invalid_input():
+    def test_random8ball_invalid_input(self):
         with pytest.raises(ValueError):
            random8ball.random8ball() 
