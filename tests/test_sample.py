@@ -47,9 +47,8 @@ class Tests:
     def test_randomNum_invalid(self):
         # with pytest.raises(ValueError):
         #     randomNum.randomNum(None) 
-        num = 0
         with pytest.raises(ValueError):
-            randomNum.randomNum(num)  # Should raise ValueError for num = 0
+            randomNum.randomNum(0)  # Should raise ValueError for num = 0
    
     def test_randomCoin_valid_input(self):
         num_flip = 255
@@ -57,9 +56,8 @@ class Tests:
         assert isinstance(result, str)
         assert result is not None
     def test_randomCoin_invalid_input(self):
-        num_flip =0
         with pytest.raises(ValueError):
-            randomCoin.randomCoin(num_flip)  # Should raise ValueError for num_flip = 0
+            randomCoin.randomCoin(0)  # Should raise ValueError for num_flip = 0
     def test_random8ball_valid_input(self):
         strn = "Hello, World"
         result = random8ball.random8ball(strn)  # Call the function with the correct parameters
