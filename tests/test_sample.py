@@ -68,4 +68,4 @@ class Tests:
         assert result is not None
     def test_random8ball_invalid_input(self):
         with pytest.raises(TypeError):
-            randomCoin.randomCoin(0)  # Should raise TypeError when the input is not a string
+             random8ball.random8ball(0)  # Should raise TypeError when the input is not a string
