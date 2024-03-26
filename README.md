@@ -72,7 +72,7 @@ pyrandom2pm.random8ball(strn): Take an string input "strn" as a parameter. If th
 ## Examples
 
 ## PyPI Link
-here[www.google.com]
+[(https://test.pypi.org/project/pyrandom2pm/)]
 
 ## Authors
 Brendan Tang, Yiwei Luo, Minjae Lee, Joseph Lee
