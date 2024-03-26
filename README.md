@@ -50,7 +50,7 @@ pyrandom2pm.randomDice(num_dice, num_sides): Take two integer inputs "num_dice" 
 
 `temp == 11 #5+6`
 
-pyrandom2pm.randomCoin(num_flip): Take an integer input "num_flip" as a parameter. It returns a string representing the result of a "num_flip" number of coin-flipping based on a random binary choice.
+pyrandom2pm.randomCoin(num_flip): Take an integer input "num_flip" as a parameter. It returns a string representing the result of a "num_flip" number of coin-flipping based on a random binary choice. If no input is given as parameter "num_flip", num_flip will be set into default value of num_flip==1.
 For instance, if the function takes 3 as a parameter in the form of pyrandom2pm.randomCoin(num_flip) when num_flip=3. num_flip is equal to 3 and 3 results of coin-flipping will be represented in the returned string. It can be "Head Head Tail" or "Tail Tail Head" or "Tail Head Tail" and so on.
 
 `num_flip =3`
@@ -59,7 +59,7 @@ For instance, if the function takes 3 as a parameter in the form of pyrandom2pm.
 
 `temp ==  "Head Head Tail" #Two heads and one tail generated`
 
-pyrandom2pm.random8ball(strn): Take an string input "strn" as a parameter. If the string input ends with "?", it randomly returns a string of "Yes" or "No" or "I don't know" as an answer. If the string is not end with "?", it returns "That was not a question".
+pyrandom2pm.random8ball(strn): Take an string input "strn" as a parameter. If the string input ends with "?", it randomly returns a string of "Yes" or "No" or "I don't know" as an answer. If the string is not end with "?", it returns "That was not a question". If no input is given as parameter "strn", strn will be set into default value of strn=="defailt?".
 
 `strn = "How are you?"`
 
