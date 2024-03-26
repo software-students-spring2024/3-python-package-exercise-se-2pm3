@@ -34,6 +34,18 @@ class Tests:
             randomDice.randomDice(3, 6)  # Should raise ValueError for num_dice > 2
         with pytest.raises(ValueError): # Should raise ValueError when all parameters are zero
             randomDice.randomDice(0, 0)
+        with pytest.raises(TypeError): # Should raise TypeError when any or both of the parameter are not integer
+            randomDice.randomDice("Hello", "World")
+        with pytest.raises(TypeError): # Should raise TypeError when any or both of the parameter are not integer
+            randomDice.randomDice("Hello", 3)
+        with pytest.raises(TypeError): # Should raise TypeError when any or both of the parameter are not integer
+            randomDice.randomDice(1, "World")
+        with pytest.raises(TypeError): # Should raise TypeError when any or both of the parameter are not integer
+            randomDice.randomDice(248.88, 289.999)
+        with pytest.raises(TypeError): # Should raise TypeError when any or both of the parameter are not integer
+            randomDice.randomDice(248.88, 3)
+        with pytest.raises(TypeError): # Should raise TypeError when any or both of the parameter are not integer
+            randomDice.randomDice(1, 232434.2323)
     def test_randomDice_invalid_num_sides(self):
         with pytest.raises(ValueError):# Should raise ValueError for num_dice ==0
             randomDice.randomDice(1, 0)
@@ -50,7 +62,10 @@ class Tests:
             randomNum.randomNum(-1) 
         with pytest.raises(ValueError):
             randomNum.randomNum(0)  # Should raise ValueError for num = 0
-   
+        with pytest.raises(TypeError):
+            randomNum.randomNum("Hello")  # Should raise TypeError for the input being string
+        with pytest.raises(TypeError):
+            randomNum.randomNum(248.888)  # Should raise TypeError for the input being float
     def test_randomCoin_valid_input(self):
         num_flip = 255
         result = randomCoin.randomCoin(num_flip)  # Call the function with the correct parameters
@@ -61,6 +76,10 @@ class Tests:
             randomCoin.randomCoin(0)  # Should raise ValueError for num_flip = 0
         with pytest.raises(ValueError):
             randomCoin.randomCoin(-200)  # Should raise ValueError for num_flip <0
+        with pytest.raises(ValueError):
+            randomCoin.randomCoin("Hello")  # Should raise TypeError for the input being string
+        with pytest.raises(ValueError):
+            randomCoin.randomCoin(23.333)  # Should raise TypeError for the input being float
     def test_random8ball_valid_input(self):
         strn = "Hello, World?"
         result = random8ball.random8ball(strn)  # Call the function with the correct parameters
@@ -69,3 +88,5 @@ class Tests:
     def test_random8ball_invalid_input(self):
         with pytest.raises(TypeError):
              random8ball.random8ball(0)  # Should raise TypeError when the input is not a string
+        with pytest.raises(TypeError):
+             random8ball.random8ball(248.88)  # Should raise TypeError when the input is not a string
