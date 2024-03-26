@@ -7,4 +7,4 @@ def randomNum(num):
             ret = random.randint(1, num)
             return ret
     else:
-        return TypeError
+        raise TypeError

@@ -10,4 +10,4 @@ def randomDice(num_dice, num_sides):
                 total += random_number
             return total
     else:
-        return TypeError
+        raise TypeError
