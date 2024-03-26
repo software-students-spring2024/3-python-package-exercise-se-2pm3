@@ -9,6 +9,7 @@ version = "0.0.6"
 authors = [
   { name="Minjae Lee", email="ml6722@nyu.edu" },
   { name="Joseph Lee", email="jtl9244@nyu.edu" },
+  { name="Yiwei Luo", email="yl7408@nyu.edu"},
 ]
 license = { file = "LICENSE" }
 readme = "README.md"
