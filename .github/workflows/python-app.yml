@@ -73,13 +73,13 @@ jobs:
           # Specifying a GitHub environment is optional, but strongly encouraged
       # retrieve your distributions here
         if: |
-          github.event.pull_request.merged &&
-          github.event.pull_request.base.ref == 'main'
+          github.event_name == 'push' &&
+          github.ref == 'refs/heads/main'
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
           repository-url: https://test.pypi.org/legacy/
       - name: Publish to PyPI
         if: |
-          github.event.pull_request.merged &&
-          github.event.pull_request.base.ref == 'main'
+          github.event_name == 'push' &&
+          github.ref == 'refs/heads/main'
         uses: pypa/gh-action-pypi-publish@release/v1
