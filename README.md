@@ -59,13 +59,13 @@ For instance, if the function takes 3 as a parameter in the form of pyrandom2pm.
 
 `temp ==  "Head Head Tail" #Two heads and one tail generated`
 
-pyrandom2pm.random8ball(strn): Take an string input "strn" as a parameter. If the string input ends with "?", it randomly returns a string of "Yes" or "No" or "I don't know" as an answer. If the string is not end with "?", it returns "That was not a question".
+pyrandom2pm.random8ball(strn): Take an string input "strn" as a parameter. If the string input ends with "?", it randomly returns a string of coming from a list of affirmative answers or a list of negative answers or a list of noncommited answers as an answer. If the string is not end with "?", it returns "That was not a question".
 
 `strn = "How are you?"`
 
 `temp = pyrandom2pm.random8ball(strn)`
 
-`temp == "Yes" #Returned a "Yes" by random`
+`temp == "It is certain" #Returned a random string from affirmative answer list
 
  
 
