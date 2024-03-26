@@ -61,13 +61,14 @@ jobs:
           pipenv install pytest
           pipenv install
           pipenv install tomli
+          pipenv install twine
       - name: Build package
         run: |
           pipenv install build
           pipenv run python -m build .
       - name: Publish to TestPyPI
         run: |
-          python3 -m twine upload dist/*
+          python -m twine upload dist/*
         env:
           TWINE_USERNAME: __token__
           TWINE_PASSWORD: ${{ secrets.TEST_PYPI_API_TOKEN }}
