@@ -51,6 +51,10 @@ jobs:
   deliver:
     needs: [build]
     runs-on: ubuntu-latest
+    environment: release
+    permissions:
+# IMPORTANT: this permission is mandatory for trusted publishing
+      id-token: write
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@v3
@@ -65,18 +69,9 @@ jobs:
         run: |
           pipenv install build
           pipenv run python -m build .
-  pypi-publish:
-    needs: [deliver]
-    name: upload release to TestPyPI
-    runs-on: ubuntu-latest
-    # Specifying a GitHub environment is optional, but strongly encouraged
-    environment: release
-    permissions:
-    # IMPORTANT: this permission is mandatory for trusted publishing
-      id-token: write
-    steps:
+      - name: upload release to TestPyPI
+          # Specifying a GitHub environment is optional, but strongly encouraged
       # retrieve your distributions here
-      - name: Publish package distributions to TestPyPI
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
           repository-url: https://test.pypi.org/legacy/
