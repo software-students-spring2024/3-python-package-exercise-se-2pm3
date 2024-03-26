@@ -61,16 +61,19 @@ jobs:
           pipenv install pytest
           pipenv install
           pipenv install tomli
-          pip install twine
       - name: Build package
         run: |
           pipenv install build
           pipenv run python -m build .
-      - name: Publish to TestPyPI
-        run: |
-          python -m twine upload dist/*
-        env:
-          TWINE_USERNAME: __token__
-          TWINE_PASSWORD: ${{ secrets.TEST_PYPI_API_TOKEN }}
-          repository_url: https://test.pypi.org/legacy/
-          TWINE_REPOSITORY: testpypi
+  pypi-publish:
+    name: upload release to PyPI
+    runs-on: ubuntu-latest
+    # Specifying a GitHub environment is optional, but strongly encouraged
+    environment: release
+    permissions:
+    # IMPORTANT: this permission is mandatory for trusted publishing
+      id-token: write
+    steps:
+      # retrieve your distributions here
+      - name: Publish package distributions to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
