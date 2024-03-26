@@ -7,7 +7,7 @@ noncommitAns = ["Reply hazy, try again", "Ask again later", "Better not tell you
 
 # 8ball function
 # default value = "default?" to return a random answer
-def random8Ball(string = "default?"):
+def random8ball(string = "default?"):
     if isinstance(string, str):
         if '?' in string[-1]:
             ansType = random.randint(0, 2)

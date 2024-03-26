@@ -14,9 +14,9 @@ def randomCoin(numFlips = 1):
             for i in range(numFlips):
                 result = random.randint(0,1)
                 if result == 0:
-                    flipResults.append("Tails")
+                    flipResults.append("Tail")
                 elif result == 1:
-                    flipResults.append("Heads")
+                    flipResults.append("Head")
             
             # turn results to a string
             flipResultsString = " ".join(j for j in flipResults)
