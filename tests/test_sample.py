@@ -83,6 +83,11 @@ class Tests:
             randomCoin.randomCoin("Hello")  # Should raise TypeError for the input being string
         with pytest.raises(TypeError):
             randomCoin.randomCoin(23.333)  # Should raise TypeError for the input being float
+    def test_randomCoin_default_input(self):
+        num_flip = None
+        result = randomCoin.randomCoin(num_flip)  # Call the function with the correct parameters
+        assert isinstance(result, str)
+        assert result is not None
     def test_random8ball_valid_input(self):
         strn = "Hello, World?"
         result = random8ball.random8ball(strn)  # Call the function with the correct parameters
@@ -92,6 +97,11 @@ class Tests:
         strn = "Hello, World"
         result = random8ball.random8ball(strn)  # Call the function with the correct parameters
         assert result ==  "That was not a question."
+    def test_random8ball_default_input(self):
+        strn = None
+        result = random8ball.random8ball(strn)  # Call the function with the correct parameters
+        assert isinstance(result, str)
+        assert result is not None
     def test_random8ball_invalid_input(self):
         with pytest.raises(TypeError):
              random8ball.random8ball(0)  # Should raise TypeError when the input is not a string
