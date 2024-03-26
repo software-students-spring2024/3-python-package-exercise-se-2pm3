@@ -8,6 +8,7 @@ pytest = "*"
 build = "*"
 twine = "*"
 actions-python-github = "*"
+coverage = "*"
 
 [dev-packages]
 

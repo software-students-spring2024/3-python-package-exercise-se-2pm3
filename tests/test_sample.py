@@ -88,6 +88,10 @@ class Tests:
         result = random8ball.random8ball(strn)  # Call the function with the correct parameters
         assert isinstance(result, str)
         assert result is not None
+    def test_random8ball_nonquestion_input(self):
+        strn = "Hello, World"
+        result = random8ball.random8ball(strn)  # Call the function with the correct parameters
+        assert result ==  "That was not a question."
     def test_random8ball_invalid_input(self):
         with pytest.raises(TypeError):
              random8ball.random8ball(0)  # Should raise TypeError when the input is not a string
