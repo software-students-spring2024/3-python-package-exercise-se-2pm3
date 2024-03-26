@@ -59,6 +59,7 @@ jobs:
           pip install --user pipenv
           pipenv install pytest
           pipenv install
+          pipenv install tomli
       - name: Build package
         run: |
           pipenv install build
