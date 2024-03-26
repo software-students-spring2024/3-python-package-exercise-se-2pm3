@@ -3,7 +3,6 @@
 
 Pyrandom2pm is a fun package to generate random results with four functions responding to user inputs. This could be used for random number generation, generating a random Yes or No response to answer your questions using 8-ball, returning the culmulative result of a given number of coin flips as a string, and calculating the sum of up to two dices with user-defined number of sides. Automatic pytests have been programmed for testing for each commit on github.
 
-
 ## Instructions
 To install the module, use the following command:
 
