@@ -1,18 +1,26 @@
 import random
-def randomCoin(num_flip):
-    if isinstance(num_flip, int):
-        if num_flip<=0:
+
+# coin flip function
+# default value = 1
+def randomCoin(numFlips = 1):
+    # check if the argument is an int
+    if isinstance(numFlips, int):
+        # validate argument is positive number
+        if numFlips<=0:
             raise ValueError
         else:
-            lst =[]
-            for i in range(num_flip):
-                head = random.randint(0,1)
-                if head == 0:
-                    lst.append("Tail")
-                elif head ==1:
-                    lst.append("Head")
-            ret = " ".join(j for j in lst)
-            return ret
+            # store results
+            flipResults =[]
+            for i in range(numFlips):
+                result = random.randint(0,1)
+                if result == 0:
+                    flipResults.append("Tail")
+                elif result == 1:
+                    flipResults.append("Head")
+            
+            # turn results to a string
+            flipResultsString = " ".join(j for j in flipResults)
+            return flipResultsString
     else:
         raise TypeError
 

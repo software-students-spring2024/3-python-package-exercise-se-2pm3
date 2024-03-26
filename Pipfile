@@ -9,6 +9,7 @@ build = "*"
 twine = "*"
 actions-python-github = "*"
 coverage = "*"
+pyrandom2pm = {file = ".", editable = true}
 
 [dev-packages]
 
