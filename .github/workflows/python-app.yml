@@ -66,7 +66,7 @@ jobs:
           pipenv install build
           pipenv run python -m build .
   pypi-publish:
-    needs: [build]
+    needs: [deliver]
     name: upload release to TestPyPI
     runs-on: ubuntu-latest
     # Specifying a GitHub environment is optional, but strongly encouraged
