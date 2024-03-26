@@ -61,7 +61,7 @@ jobs:
           pipenv install pytest
           pipenv install
           pipenv install tomli
-          pipenv install twine
+          pip install twine
       - name: Build package
         run: |
           pipenv install build
