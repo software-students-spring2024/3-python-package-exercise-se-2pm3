@@ -40,9 +40,11 @@ min = 3
 max = 100
 
 print(pyrandom2pm.randomNum(min, max))
+```
 
-# example output
-45
+Example Output
+```
+$ 45
 ```
 
 pyrandom2pm.randomDice(num_dice, num_sides): Takes two integer inputs `num_dice` and `num_sides` as parameters. `num_sides` is the number of sides on the dice where only three valid dice sizes are taken: six sides, twelve sides, and twenty sides. `num_dice` is the number of dice to be rolled, which can be either one or two. The function will return the dice roll or the sum of the dice roll if two dice are used.
@@ -54,9 +56,11 @@ num_sides = 6
 
 roll = pyrandom2pm.randomDice(num_dice, num_sides)
 print(roll)
+```
 
-# example output
-9
+Example Output
+```
+$ 9
 ```
 
 pyrandom2pm.randomCoin(num_flip): Takes an integer input `num_flip` as a parameter. `num_flip` represents the amount of coin flips a user would like to do. The default value of `num_flip` is `1`. The function returns a string of all the coin flip results.
@@ -67,9 +71,11 @@ num_flip = 3
 
 flipResults = pyrandom2pm.randomCoin(num_flip)
 print(flipResults)
+```
 
-# example output
-Heads Heads Tails
+Example Output
+```
+$ Heads Heads Tails
 ```
 
 pyrandom2pm.random8ball(string): Takes a string input `string` as a parameter. If the input string ends with a `"?"`, the 8ball will randomly return a `yes` answer, a `no` answer, or a `noncommital` answer. If the string does not end with `"?"`, the function returns `"That was not a question"`.
@@ -80,10 +86,17 @@ string = "Will I pass SWE with Professor Bloomberg?"
 
 answer = pyrandom2pm.random8Ball(string)
 print(answer)
-
-# example output (noncommital answer)
-Ask again later 
 ```
+
+Example Output
+```
+$ Ask again later 
+```
+
+
+More examples can be found at test_pyrandom2pm.py in the tests folder:
+
+`python test_pyrandom2pm.py`
 
 ## PyPI Link
 [pyrandom2pm](https://pypi.org/project/pyrandom2pm/)
