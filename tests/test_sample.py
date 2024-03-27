@@ -81,6 +81,7 @@ class Tests:
             pyrandom2pm.randomCoin("Hello")  # Should raise TypeError for the input being string
         with pytest.raises(TypeError):
             pyrandom2pm.randomCoin(23.333)  # Should raise TypeError for the input being float
+    
     def test_random8ball_valid_input(self):
         strn = "Hello, World?"
         result = pyrandom2pm.random8ball(strn)  # Call the function with the correct parameters

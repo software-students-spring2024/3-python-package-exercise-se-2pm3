@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "pyrandom2pm"
 description = "Pyrandom2pm is a fun package to generate random results. This could be used for random number generation, using it answer your questions using 8-ball, and other unsure scenarios."
-version = "0.1.4"
+version = "0.1.5"
 authors = [
   { name="Minjae Lee", email="ml6722@nyu.edu" },
   { name="Joseph Lee", email="jtl9244@nyu.edu" },
