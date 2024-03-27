@@ -101,5 +101,9 @@ More examples can be found at test_pyrandom2pm.py in the tests folder:
 ## PyPI Link
 [pyrandom2pm](https://pypi.org/project/pyrandom2pm/)
 
+# To contribute
+
+To contribute, please fork and clone from our public [GitHub repository](https://github.com/software-students-spring2024/3-python-package-exercise-se-2pm3). The source code are in src/pyrandom2pm. To allow the system to automatically update the new version and avoid delivery error, increment the "version =" in pyproject.toml to indicate a new version.
+
 ## Authors and Githubs
 [Brendan Tang](https://github.com/Tango117), [Yiwei Luo](https://github.com/yl7408), [Minjae Lee](https://github.com/minjae07206), [Joseph Lee](https://github.com/pastuhhhh)
