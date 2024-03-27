@@ -51,15 +51,16 @@ class Tests:
 
         
     def test_randomNum_valid_input(self):
-        num = 255
-        result = pyrandom2pm.randomNum(num)  # Call the function with the correct parameters
+        num1 = -100
+        num2 = 400
+        result = pyrandom2pm.randomNum(num1,num2)  # Call the function with the correct parameters
         assert isinstance(result, int)
-        assert 1 <= result <= num
+        assert num1 <= result <= num2
     def test_randomNum_value_invalid(self):
         with pytest.raises(ValueError):
-            pyrandom2pm.randomNum(-1) 
+            pyrandom2pm.randomNum(-1, -6) 
         with pytest.raises(ValueError):
-            pyrandom2pm.randomNum(0)  # Should raise ValueError for num = 0
+            pyrandom2pm.randomNum(100, 0)  # Should raise ValueError for num = 0
     def test_randomNum_type_invalid(self):
         with pytest.raises(TypeError):
             pyrandom2pm.randomNum("Hello")  # Should raise TypeError for the input being string
