@@ -1,5 +1,5 @@
 import pytest
-from Pyrandom2pm import pyrandom2pm
+import pyrandom2pm
 class Tests:
     @pytest.fixture
     def example_fixture(self):
