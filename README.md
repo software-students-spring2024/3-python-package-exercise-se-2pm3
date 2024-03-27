@@ -32,16 +32,17 @@ Github Action: `pipenv install actions-python-github`
 
 The following are the four functions of the module with their accepted parameters:
 
-pyrandom2pm.randomNum(n): Takes an integer input `n` as a parameter. The function returns a random integer between 1 and the input integer.
+pyrandom2pm.randomNum(min, max): Takes positive or negative integer inputs `min` and `max` as a parameter. The function returns a random integer between `min` and `max` inclusive.
 
 ```python
 # example use-case
-num = 3
+min = 3
+max = 100
 
-print(pyrandom2pm.randomNum(num))
+print(pyrandom2pm.randomNum(min, max))
 
 # example output
-2
+45
 ```
 
 pyrandom2pm.randomDice(num_dice, num_sides): Takes two integer inputs `num_dice` and `num_sides` as parameters. `num_sides` is the number of sides on the dice where only three valid dice sizes are taken: six sides, twelve sides, and twenty sides. `num_dice` is the number of dice to be rolled, which can be either one or two. The function will return the dice roll or the sum of the dice roll if two dice are used.
