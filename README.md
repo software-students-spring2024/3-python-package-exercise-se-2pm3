@@ -75,7 +75,7 @@ pyrandom2pm.random8ball(string): Takes a string input `string` as a parameter. I
 # example use-case
 string = "Will I pass SWE with Professor Bloomberg?"
 
-answer = pyrandom2pm.random8Ball(string)
+answer = pyrandom2pm.random8ball(string)
 print(answer)
 ```
 
