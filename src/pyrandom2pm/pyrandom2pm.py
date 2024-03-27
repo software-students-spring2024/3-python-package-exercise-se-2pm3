@@ -65,7 +65,7 @@ def randomDice(num_dice, num_sides):
             raise ValueError
         else:
             total = 0
-            for i in range(num_dice):
+            for _ in range(num_dice):
                 random_number = random.randint(1, num_sides)
                 total += random_number
             return total
