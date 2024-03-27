@@ -61,7 +61,7 @@ def randomCoin(numFlips = 1):
     
 def randomDice(num_dice, num_sides):
     if isinstance(num_dice, int) and isinstance(num_sides, int):
-        if num_dice<=0 or num_sides<=0 or (num_dice<=0 and num_sides<=0) or num_dice >2:
+        if num_dice<=0 or num_sides<=0 or (num_dice<=0 and num_sides<=0) or num_dice > 2 or (num_sides != 6 and num_sides != 12 and num_sides != 20):
             raise ValueError
         else:
             total = 0
@@ -75,12 +75,12 @@ def randomDice(num_dice, num_sides):
 
 # RANDOM NUMBER GENERATOR FUNCTION
     
-def randomNum(num):
-    if isinstance(num, int):
-        if num<=0:
+def randomNum(min, max):
+    if isinstance(min, int) and isinstance(max, int):
+        if max <= min:
             raise ValueError
         else:
-            ret = random.randint(1, num)
+            ret = random.randint(min, max)
             return ret
     else:
         raise TypeError
