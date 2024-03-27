@@ -1,25 +1,25 @@
 [![Python application](https://github.com/software-students-spring2024/3-python-package-exercise-se-2pm3/actions/workflows/python-app.yml/badge.svg)](https://github.com/software-students-spring2024/3-python-package-exercise-se-2pm3/actions/workflows/python-app.yml)
 # Pyrandom2pm
 
-Pyrandom2pm is a fun package to generate random results with four functions responding to user inputs. This could be used for random number generation, generating a random Yes or No response to answer your questions using 8-ball, returning the culmulative result of a given number of coin flips as a string, and calculating the sum of up to two dices with user-defined number of sides. Automatic pytests have been programmed for testing for each commit on github.
+Pyrandom2pm is a package that adds four random output generators through function calls. The package includes a random number generator, a magic 8-ball that gives random responses to given questions, a dice roll that allows the user to roll up to two dice, and a coin flip that allows for multiple coin flips in one call. Automatic pytests have been created for testing for each commit on github.
 
 ## Instructions
-To install the module, use the following command:
+The module can be installed through normal pip installation syntax:
 
 
 `pip install pyrandom2pm`
 
-if to build and test the command, virtual environment is required
+Building and testing the package requires a virtual environment.
 
-To start the virtual environment, use:
+Start the virtual environment, using:
 
 `pipenv shell`
 
-Then, install the module in virtual environment through--
+Then, install the module in virtual environment through:
 
 `pipenv install pyrandom2pm`.
 
-Then, to build or test or both, install following required modules in virtual environment through--
+Then, to build or test or both, install the following required modules in the virtual environment through:
 
 pytest: `pipenv install pytest`
 
@@ -30,49 +30,80 @@ twine: `pipenv install twine`
 Github Action: `pipenv install actions-python-github`
 
 
-The following are the four functions of the module with its parameter:
+The following are the four functions of the module with their accepted parameters:
 
-pyrandom2pm.randomNum(num): Take an integer input "num" as parameter. It returns a random integer between 1 and the input integer.
+pyrandom2pm.randomNum(min, max): Takes positive or negative integer inputs `min` and `max` as a parameter. The function returns a random integer between `min` and `max` inclusive.
 
-`num = 3`
+```python
+# example use-case
+min = 3
+max = 100
 
-`temp = pyrandom2pm.randomNum(num)`
+print(pyrandom2pm.randomNum(min, max))
+```
 
-`temp ==2 #A random integer between 1 and num`
+Example Output
+```
+$ 45
+```
 
-pyrandom2pm.randomDice(num_dice, num_sides): Take two integer inputs "num_dice" and "num_sides" as parameters. It returns the sum of "num_dice" number of random integers between 1 and num_sides. Please notices that "num_dice" can not be larger than two.
+pyrandom2pm.randomDice(num_dice, num_sides): Takes two integer inputs `num_dice` and `num_sides` as parameters. `num_sides` is the number of sides on the dice where only three valid dice sizes are taken: six sides, twelve sides, and twenty sides. `num_dice` is the number of dice to be rolled, which can be either one or two. The function will return the dice roll or the sum of the dice roll if two dice are used.
 
-`num_dice = 2`
+```python
+# example use-case
+num_dice = 2
+num_sides = 6
 
-`num_sides = 6`
+roll = pyrandom2pm.randomDice(num_dice, num_sides)
+print(roll)
+```
 
-`temp = pyrandom2pm.randomDice(num_dice, num_sides)`
+Example Output
+```
+$ 9
+```
 
-`temp == 11 #5+6`
+pyrandom2pm.randomCoin(num_flip): Takes an integer input `num_flip` as a parameter. `num_flip` represents the amount of coin flips a user would like to do. The default value of `num_flip` is `1`. The function returns a string of all the coin flip results.
 
-pyrandom2pm.randomCoin(num_flip): Take an integer input "num_flip" as a parameter. It returns a string representing the result of a "num_flip" number of coin-flipping based on a random binary choice.
-For instance, if the function takes 3 as a parameter in the form of pyrandom2pm.randomCoin(num_flip) when num_flip=3. num_flip is equal to 3 and 3 results of coin-flipping will be represented in the returned string. It can be "Head Head Tail" or "Tail Tail Head" or "Tail Head Tail" and so on.
+```python
+# example use-case
+num_flip = 3
 
-`num_flip =3`
+flipResults = pyrandom2pm.randomCoin(num_flip)
+print(flipResults)
+```
 
-`temp = pyrandom2pm.randomCoin(num_flip)`
+Example Output
+```
+$ Heads Heads Tails
+```
 
-`temp ==  "Head Head Tail" #Two heads and one tail generated`
+pyrandom2pm.random8ball(string): Takes a string input `string` as a parameter. If the input string ends with a `"?"`, the 8ball will randomly return a `yes` answer, a `no` answer, or a `noncommital` answer. If the string does not end with `"?"`, the function returns `"That was not a question"`.
 
-pyrandom2pm.random8ball(strn): Take an string input "strn" as a parameter. If the string input ends with "?", it randomly returns a string of "Yes" or "No" or "I don't know" as an answer. If the string is not end with "?", it returns "That was not a question".
+```python
+# example use-case
+string = "Will I pass SWE with Professor Bloomberg?"
 
-`strn = "How are you?"`
+answer = pyrandom2pm.random8Ball(string)
+print(answer)
+```
 
-`temp = pyrandom2pm.random8ball(strn)`
+Example Output
+```
+$ Ask again later 
+```
 
-`temp == "Yes" #Returned a "Yes" by random`
 
- 
+More examples can be found at test_pyrandom2pm.py in the tests folder:
 
-## Examples
+`python test_pyrandom2pm.py`
 
 ## PyPI Link
-here[www.google.com]
+[pyrandom2pm](https://pypi.org/project/pyrandom2pm/)
 
-## Authors
-Brendan Tang, Yiwei Luo, Minjae Lee, Joseph Lee
+# To contribute
+
+To contribute, please fork and clone from our public [GitHub repository](https://github.com/software-students-spring2024/3-python-package-exercise-se-2pm3). The source code are in src/pyrandom2pm. To allow the system to automatically update the new version and avoid delivery error, increment the "version =" in pyproject.toml to indicate a new version.
+
+## Authors and Githubs
+[Brendan Tang](https://github.com/Tango117), [Yiwei Luo](https://github.com/yl7408), [Minjae Lee](https://github.com/minjae07206), [Joseph Lee](https://github.com/pastuhhhh)
