@@ -1,5 +1,5 @@
 import pytest
-from pyrandom2pm import pyrandom2pm
+from Pyrandom2pm import pyrandom2pm
 class Tests:
     @pytest.fixture
     def example_fixture(self):
@@ -79,16 +79,7 @@ class Tests:
         with pytest.raises(TypeError):
             pyrandom2pm.randomCoin("Hello")  # Should raise TypeError for the input being string
         with pytest.raises(TypeError):
-<<<<<<< HEAD
-            randomCoin.randomCoin(23.333)  # Should raise TypeError for the input being float
-    def test_randomCoin_default_input(self):
-        num_flip = None
-        result = randomCoin.randomCoin(num_flip)  # Call the function with the correct parameters
-        assert isinstance(result, str)
-        assert result is not None
-=======
             pyrandom2pm.randomCoin(23.333)  # Should raise TypeError for the input being float
->>>>>>> c577c62bb704cdd10f01767dff492f416973f79e
     def test_random8ball_valid_input(self):
         strn = "Hello, World?"
         result = pyrandom2pm.random8ball(strn)  # Call the function with the correct parameters
@@ -98,11 +89,6 @@ class Tests:
         strn = "Hello, World"
         result = pyrandom2pm.random8ball(strn)  # Call the function with the correct parameters
         assert result ==  "That was not a question"
-    def test_random8ball_default_input(self):
-        strn = None
-        result = random8ball.random8ball(strn)  # Call the function with the correct parameters
-        assert isinstance(result, str)
-        assert result is not None
     def test_random8ball_invalid_input(self):
         with pytest.raises(TypeError):
              pyrandom2pm.random8ball(0)  # Should raise TypeError when the input is not a string
